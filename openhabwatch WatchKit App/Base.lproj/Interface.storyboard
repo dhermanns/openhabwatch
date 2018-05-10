@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="openhabwatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="overlap" id="Jg9-7I-sSk">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="Z3L-Ie-lK8">
+                                    <items>
+                                        <button width="1" height="50" alignment="left" title="Haustür" id="QIk-ma-Uhw">
+                                            <connections>
+                                                <action selector="doButtonPressedHaustuer" destination="AgC-eL-Hgc" id="rSl-AC-Lxp"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" height="50" alignment="left" title="Garage" id="63d-kP-RBl">
+                                            <connections>
+                                                <action selector="doButtonPressedGarage" destination="AgC-eL-Hgc" id="uQ4-N8-yR2"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" height="50" alignment="left" title="Garagentür" id="1rN-tl-cji">
+                                            <connections>
+                                                <action selector="doButtonPressedGaragentuer" destination="AgC-eL-Hgc" id="KzZ-rz-PXt"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" height="50" alignment="left" title="Küchenlampe" id="hlh-Jh-M5Z">
+                                            <connections>
+                                                <action selector="doButtonPressedKuechenlampe" destination="AgC-eL-Hgc" id="UbR-nY-VVb"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="center" layout="overlap" id="jR9-Fd-TaV">
+                                    <items>
+                                        <imageView alignment="center" image="Activity1" id="ASz-Os-ceT"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityImage" destination="ASz-Os-ceT" id="uhT-Vg-n4Y"/>
+                        <outlet property="garageButton" destination="63d-kP-RBl" id="8Z8-d0-EcR"/>
+                        <outlet property="garagentuerButton" destination="1rN-tl-cji" id="J3i-Qu-5Ew"/>
+                        <outlet property="haustuerButton" destination="QIk-ma-Uhw" id="ZNc-9b-PGa"/>
+                        <outlet property="kuechenButton" destination="hlh-Jh-M5Z" id="WZ5-bf-7tt"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

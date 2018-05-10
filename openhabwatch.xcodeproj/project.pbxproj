@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43780C2620986815003C9CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C2520986815003C9CE0 /* AppDelegate.swift */; };
+		43780C2820986815003C9CE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C2720986815003C9CE0 /* ViewController.swift */; };
+		43780C2B20986815003C9CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43780C2920986815003C9CE0 /* Main.storyboard */; };
+		43780C2D20986815003C9CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43780C2C20986815003C9CE0 /* Assets.xcassets */; };
+		43780C3020986815003C9CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43780C2E20986815003C9CE0 /* LaunchScreen.storyboard */; };
+		43780C3B20986815003C9CE0 /* openhabwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C3A20986815003C9CE0 /* openhabwatchTests.swift */; };
+		43780C4620986815003C9CE0 /* openhabwatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C4520986815003C9CE0 /* openhabwatchUITests.swift */; };
+		43780C4B20986815003C9CE0 /* openhabwatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43780C4A20986815003C9CE0 /* openhabwatch WatchKit App.app */; };
+		43780C5120986815003C9CE0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43780C4F20986815003C9CE0 /* Interface.storyboard */; };
+		43780C5320986815003C9CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43780C5220986815003C9CE0 /* Assets.xcassets */; };
+		43780C5A20986815003C9CE0 /* openhabwatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43780C5920986815003C9CE0 /* openhabwatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C5E20986815003C9CE0 /* InterfaceController.swift */; };
+		43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C6020986815003C9CE0 /* ExtensionDelegate.swift */; };
+		43780C6320986815003C9CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43780C6220986815003C9CE0 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43780C3720986815003C9CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43780C1A20986814003C9CE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43780C2120986815003C9CE0;
+			remoteInfo = openhabwatch;
+		};
+		43780C4220986815003C9CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43780C1A20986814003C9CE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43780C2120986815003C9CE0;
+			remoteInfo = openhabwatch;
+		};
+		43780C4C20986815003C9CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43780C1A20986814003C9CE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43780C4920986815003C9CE0;
+			remoteInfo = "openhabwatch WatchKit App";
+		};
+		43780C5B20986815003C9CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43780C1A20986814003C9CE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43780C5820986815003C9CE0;
+			remoteInfo = "openhabwatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43780C6A20986815003C9CE0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				43780C5A20986815003C9CE0 /* openhabwatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C6E20986815003C9CE0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				43780C4B20986815003C9CE0 /* openhabwatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		43780C2220986815003C9CE0 /* openhabwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openhabwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43780C2520986815003C9CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43780C2720986815003C9CE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43780C2A20986815003C9CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43780C2C20986815003C9CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43780C2F20986815003C9CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43780C3120986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43780C3620986815003C9CE0 /* openhabwatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openhabwatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43780C3A20986815003C9CE0 /* openhabwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openhabwatchTests.swift; sourceTree = "<group>"; };
+		43780C3C20986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43780C4120986815003C9CE0 /* openhabwatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openhabwatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43780C4520986815003C9CE0 /* openhabwatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openhabwatchUITests.swift; sourceTree = "<group>"; };
+		43780C4720986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43780C4A20986815003C9CE0 /* openhabwatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openhabwatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43780C5020986815003C9CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		43780C5220986815003C9CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43780C5420986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43780C5920986815003C9CE0 /* openhabwatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "openhabwatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43780C5E20986815003C9CE0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		43780C6020986815003C9CE0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		43780C6220986815003C9CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43780C6420986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43780C1F20986815003C9CE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3320986815003C9CE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3E20986815003C9CE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C5620986815003C9CE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43780C1920986814003C9CE0 = {
+			isa = PBXGroup;
+			children = (
+				43780C2420986815003C9CE0 /* openhabwatch */,
+				43780C3920986815003C9CE0 /* openhabwatchTests */,
+				43780C4420986815003C9CE0 /* openhabwatchUITests */,
+				43780C4E20986815003C9CE0 /* openhabwatch WatchKit App */,
+				43780C5D20986815003C9CE0 /* openhabwatch WatchKit Extension */,
+				43780C2320986815003C9CE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43780C2320986815003C9CE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43780C2220986815003C9CE0 /* openhabwatch.app */,
+				43780C3620986815003C9CE0 /* openhabwatchTests.xctest */,
+				43780C4120986815003C9CE0 /* openhabwatchUITests.xctest */,
+				43780C4A20986815003C9CE0 /* openhabwatch WatchKit App.app */,
+				43780C5920986815003C9CE0 /* openhabwatch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43780C2420986815003C9CE0 /* openhabwatch */ = {
+			isa = PBXGroup;
+			children = (
+				43780C2520986815003C9CE0 /* AppDelegate.swift */,
+				43780C2720986815003C9CE0 /* ViewController.swift */,
+				43780C2920986815003C9CE0 /* Main.storyboard */,
+				43780C2C20986815003C9CE0 /* Assets.xcassets */,
+				43780C2E20986815003C9CE0 /* LaunchScreen.storyboard */,
+				43780C3120986815003C9CE0 /* Info.plist */,
+			);
+			path = openhabwatch;
+			sourceTree = "<group>";
+		};
+		43780C3920986815003C9CE0 /* openhabwatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				43780C3A20986815003C9CE0 /* openhabwatchTests.swift */,
+				43780C3C20986815003C9CE0 /* Info.plist */,
+			);
+			path = openhabwatchTests;
+			sourceTree = "<group>";
+		};
+		43780C4420986815003C9CE0 /* openhabwatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43780C4520986815003C9CE0 /* openhabwatchUITests.swift */,
+				43780C4720986815003C9CE0 /* Info.plist */,
+			);
+			path = openhabwatchUITests;
+			sourceTree = "<group>";
+		};
+		43780C4E20986815003C9CE0 /* openhabwatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				43780C4F20986815003C9CE0 /* Interface.storyboard */,
+				43780C5220986815003C9CE0 /* Assets.xcassets */,
+				43780C5420986815003C9CE0 /* Info.plist */,
+			);
+			path = "openhabwatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		43780C5D20986815003C9CE0 /* openhabwatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43780C5E20986815003C9CE0 /* InterfaceController.swift */,
+				43780C6020986815003C9CE0 /* ExtensionDelegate.swift */,
+				43780C6220986815003C9CE0 /* Assets.xcassets */,
+				43780C6420986815003C9CE0 /* Info.plist */,
+			);
+			path = "openhabwatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43780C2120986815003C9CE0 /* openhabwatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43780C6F20986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch" */;
+			buildPhases = (
+				43780C1E20986815003C9CE0 /* Sources */,
+				43780C1F20986815003C9CE0 /* Frameworks */,
+				43780C2020986815003C9CE0 /* Resources */,
+				43780C6E20986815003C9CE0 /* Embed Watch Content */,
+				4337735820A4DE3800F8B119 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43780C4D20986815003C9CE0 /* PBXTargetDependency */,
+			);
+			name = openhabwatch;
+			productName = openhabwatch;
+			productReference = 43780C2220986815003C9CE0 /* openhabwatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43780C3520986815003C9CE0 /* openhabwatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43780C7220986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatchTests" */;
+			buildPhases = (
+				43780C3220986815003C9CE0 /* Sources */,
+				43780C3320986815003C9CE0 /* Frameworks */,
+				43780C3420986815003C9CE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43780C3820986815003C9CE0 /* PBXTargetDependency */,
+			);
+			name = openhabwatchTests;
+			productName = openhabwatchTests;
+			productReference = 43780C3620986815003C9CE0 /* openhabwatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43780C4020986815003C9CE0 /* openhabwatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43780C7520986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatchUITests" */;
+			buildPhases = (
+				43780C3D20986815003C9CE0 /* Sources */,
+				43780C3E20986815003C9CE0 /* Frameworks */,
+				43780C3F20986815003C9CE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43780C4320986815003C9CE0 /* PBXTargetDependency */,
+			);
+			name = openhabwatchUITests;
+			productName = openhabwatchUITests;
+			productReference = 43780C4120986815003C9CE0 /* openhabwatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		43780C4920986815003C9CE0 /* openhabwatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43780C6B20986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch WatchKit App" */;
+			buildPhases = (
+				43780C4820986815003C9CE0 /* Resources */,
+				43780C6A20986815003C9CE0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43780C5C20986815003C9CE0 /* PBXTargetDependency */,
+			);
+			name = "openhabwatch WatchKit App";
+			productName = "openhabwatch WatchKit App";
+			productReference = 43780C4A20986815003C9CE0 /* openhabwatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		43780C5820986815003C9CE0 /* openhabwatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43780C6720986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch WatchKit Extension" */;
+			buildPhases = (
+				43780C5520986815003C9CE0 /* Sources */,
+				43780C5620986815003C9CE0 /* Frameworks */,
+				43780C5720986815003C9CE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "openhabwatch WatchKit Extension";
+			productName = "openhabwatch WatchKit Extension";
+			productReference = 43780C5920986815003C9CE0 /* openhabwatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43780C1A20986814003C9CE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = private;
+				TargetAttributes = {
+					43780C2120986815003C9CE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					43780C3520986815003C9CE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43780C2120986815003C9CE0;
+					};
+					43780C4020986815003C9CE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43780C2120986815003C9CE0;
+					};
+					43780C4920986815003C9CE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					43780C5820986815003C9CE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 43780C1D20986814003C9CE0 /* Build configuration list for PBXProject "openhabwatch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43780C1920986814003C9CE0;
+			productRefGroup = 43780C2320986815003C9CE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43780C2120986815003C9CE0 /* openhabwatch */,
+				43780C3520986815003C9CE0 /* openhabwatchTests */,
+				43780C4020986815003C9CE0 /* openhabwatchUITests */,
+				43780C4920986815003C9CE0 /* openhabwatch WatchKit App */,
+				43780C5820986815003C9CE0 /* openhabwatch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43780C2020986815003C9CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C3020986815003C9CE0 /* LaunchScreen.storyboard in Resources */,
+				43780C2D20986815003C9CE0 /* Assets.xcassets in Resources */,
+				43780C2B20986815003C9CE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3420986815003C9CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3F20986815003C9CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C4820986815003C9CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C5320986815003C9CE0 /* Assets.xcassets in Resources */,
+				43780C5120986815003C9CE0 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C5720986815003C9CE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C6320986815003C9CE0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4337735820A4DE3800F8B119 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nPLISTCMD=\"Set :CFBundleVersion $(git rev-list --all|wc -l)\"\n/usr/libexec/PlistBuddy -c \"$PLISTCMD\" \"openhabwatch/Info.plist\"\n/usr/libexec/PlistBuddy -c \"$PLISTCMD\" \"openhabwatchTests/Info.plist\"\n/usr/libexec/PlistBuddy -c \"$PLISTCMD\" \"openhabwatchUITests/Info.plist\"\n/usr/libexec/PlistBuddy -c \"$PLISTCMD\" \"openhabwatch WatchKit App/Info.plist\"\n/usr/libexec/PlistBuddy -c \"$PLISTCMD\" \"openhabwatch Watchkit Extension/Info.plist\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43780C1E20986815003C9CE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C2820986815003C9CE0 /* ViewController.swift in Sources */,
+				43780C2620986815003C9CE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3220986815003C9CE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C3B20986815003C9CE0 /* openhabwatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C3D20986815003C9CE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C4620986815003C9CE0 /* openhabwatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43780C5520986815003C9CE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */,
+				43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43780C3820986815003C9CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43780C2120986815003C9CE0 /* openhabwatch */;
+			targetProxy = 43780C3720986815003C9CE0 /* PBXContainerItemProxy */;
+		};
+		43780C4320986815003C9CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43780C2120986815003C9CE0 /* openhabwatch */;
+			targetProxy = 43780C4220986815003C9CE0 /* PBXContainerItemProxy */;
+		};
+		43780C4D20986815003C9CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43780C4920986815003C9CE0 /* openhabwatch WatchKit App */;
+			targetProxy = 43780C4C20986815003C9CE0 /* PBXContainerItemProxy */;
+		};
+		43780C5C20986815003C9CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43780C5820986815003C9CE0 /* openhabwatch WatchKit Extension */;
+			targetProxy = 43780C5B20986815003C9CE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43780C2920986815003C9CE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43780C2A20986815003C9CE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43780C2E20986815003C9CE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43780C2F20986815003C9CE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43780C4F20986815003C9CE0 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43780C5020986815003C9CE0 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43780C6520986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43780C6620986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43780C6820986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = "openhabwatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		43780C6920986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = "openhabwatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		43780C6C20986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				IBSC_MODULE = openhabwatch_WatchKit_Extension;
+				INFOPLIST_FILE = "openhabwatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		43780C6D20986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				IBSC_MODULE = openhabwatch_WatchKit_Extension;
+				INFOPLIST_FILE = "openhabwatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		43780C7020986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43780C7120986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.my-wan.openhabwatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43780C7320986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dhe.openhabwatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openhabwatch.app/openhabwatch";
+			};
+			name = Debug;
+		};
+		43780C7420986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dhe.openhabwatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openhabwatch.app/openhabwatch";
+			};
+			name = Release;
+		};
+		43780C7620986815003C9CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dhe.openhabwatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = openhabwatch;
+			};
+			name = Debug;
+		};
+		43780C7720986815003C9CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66QQCRE7XS;
+				INFOPLIST_FILE = openhabwatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dhe.openhabwatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = openhabwatch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43780C1D20986814003C9CE0 /* Build configuration list for PBXProject "openhabwatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C6520986815003C9CE0 /* Debug */,
+				43780C6620986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43780C6720986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C6820986815003C9CE0 /* Debug */,
+				43780C6920986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43780C6B20986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C6C20986815003C9CE0 /* Debug */,
+				43780C6D20986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43780C6F20986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C7020986815003C9CE0 /* Debug */,
+				43780C7120986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43780C7220986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C7320986815003C9CE0 /* Debug */,
+				43780C7420986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43780C7520986815003C9CE0 /* Build configuration list for PBXNativeTarget "openhabwatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43780C7620986815003C9CE0 /* Debug */,
+				43780C7720986815003C9CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43780C1A20986814003C9CE0 /* Project object */;
+}
