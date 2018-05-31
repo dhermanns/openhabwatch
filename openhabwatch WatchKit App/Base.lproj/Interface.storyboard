@@ -54,9 +54,50 @@
                         <outlet property="garagentuerButton" destination="1rN-tl-cji" id="J3i-Qu-5Ew"/>
                         <outlet property="haustuerButton" destination="QIk-ma-Uhw" id="ZNc-9b-PGa"/>
                         <outlet property="kuechenButton" destination="hlh-Jh-M5Z" id="WZ5-bf-7tt"/>
+                        <segue destination="e7o-Tt-CsM" kind="relationship" relationship="nextPage" id="CAe-kA-aVl"/>
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Prefs Interface Controller-->
+        <scene sceneID="pwb-Vg-mvC">
+            <objects>
+                <controller id="e7o-Tt-CsM" customClass="PrefsInterfaceController" customModule="openhabwatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Local URL:" id="b9D-rP-m3a">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" id="Kmv-Np-1NA" userLabel="localUrlLabel">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="Remote URL:" id="qWA-0p-D0o">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" id="Z9M-hk-rHd" userLabel="remoteUrlLabel">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="Sitemap:" id="Tnv-Ze-AJD">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" id="o8J-0J-WBs" userLabel="sitemapLabel">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="Username:" id="c5b-VZ-QOY">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" id="o6x-vo-MV1" userLabel="usernameLabel">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="localUrlLabel" destination="Kmv-Np-1NA" id="7tW-vD-RBu"/>
+                        <outlet property="remoteUrlLabel" destination="Z9M-hk-rHd" id="gWD-4h-BxK"/>
+                        <outlet property="sitemapLabel" destination="o8J-0J-WBs" id="hRh-Zb-Rr1"/>
+                        <outlet property="usernameLabel" destination="o6x-vo-MV1" id="yVc-b5-a9G"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="314" y="31"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
