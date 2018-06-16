@@ -1,5 +1,5 @@
 //
-//  OpenHabRepository.swift
+//  Frame.swift
 //  openhabwatch WatchKit Extension
 //
 //  Created by Dirk Hermanns on 31.05.18.
@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Frame {
+    
+    let items : [Item]
+    
+    init(items : [Item]) {
+        self.items = items
+    }
+}

@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		432AB39120C0192300910B6E /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AB39020C0192300910B6E /* WatchService.swift */; };
+		434F4D5D20C095BB00992996 /* OpenHabService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5C20C095BB00992996 /* OpenHabService.swift */; };
+		434F4D6020C097D800992996 /* Sitemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5F20C097D800992996 /* Sitemap.swift */; };
+		434F4D6220C098CE00992996 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6120C098CE00992996 /* Frame.swift */; };
+		434F4D6420C09B5700992996 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6320C09B5700992996 /* Item.swift */; };
 		4363195020C0231800CF5F45 /* PrefsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363194F20C0231800CF5F45 /* PrefsInterfaceController.swift */; };
-		4363195320C0294400CF5F45 /* OpenHabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195220C0294400CF5F45 /* OpenHabRepository.swift */; };
 		4363195520C02A1600CF5F45 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195420C02A1600CF5F45 /* UserDefaultsRepository.swift */; };
 		4363195720C02C4900CF5F45 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195420C02A1600CF5F45 /* UserDefaultsRepository.swift */; };
 		4363195A20C02EC300CF5F45 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195920C02EC300CF5F45 /* AppConstants.swift */; };
@@ -90,8 +93,11 @@
 
 /* Begin PBXFileReference section */
 		432AB39020C0192300910B6E /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
+		434F4D5C20C095BB00992996 /* OpenHabService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHabService.swift; sourceTree = "<group>"; };
+		434F4D5F20C097D800992996 /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
+		434F4D6120C098CE00992996 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		434F4D6320C09B5700992996 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4363194F20C0231800CF5F45 /* PrefsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsInterfaceController.swift; sourceTree = "<group>"; };
-		4363195220C0294400CF5F45 /* OpenHabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHabRepository.swift; sourceTree = "<group>"; };
 		4363195420C02A1600CF5F45 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		4363195920C02EC300CF5F45 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4363195D20C0439600CF5F45 /* AppMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessageService.swift; sourceTree = "<group>"; };
@@ -161,12 +167,14 @@
 			path = external;
 			sourceTree = "<group>";
 		};
-		4363195120C0292B00CF5F45 /* app */ = {
+		434F4D5E20C097BE00992996 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				4363195220C0294400CF5F45 /* OpenHabRepository.swift */,
+				434F4D5F20C097D800992996 /* Sitemap.swift */,
+				434F4D6120C098CE00992996 /* Frame.swift */,
+				434F4D6320C09B5700992996 /* Item.swift */,
 			);
-			path = app;
+			path = domain;
 			sourceTree = "<group>";
 		};
 		4363195620C02A2600CF5F45 /* repository */ = {
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				4363195D20C0439600CF5F45 /* AppMessageService.swift */,
+				434F4D5C20C095BB00992996 /* OpenHabService.swift */,
 			);
 			path = external;
 			sourceTree = "<group>";
@@ -264,8 +273,8 @@
 		43780C5D20986815003C9CE0 /* openhabwatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				434F4D5E20C097BE00992996 /* domain */,
 				4363195C20C0437C00CF5F45 /* external */,
-				4363195120C0292B00CF5F45 /* app */,
 				43780C5E20986815003C9CE0 /* InterfaceController.swift */,
 				4363194F20C0231800CF5F45 /* PrefsInterfaceController.swift */,
 				43780C6020986815003C9CE0 /* ExtensionDelegate.swift */,
@@ -518,13 +527,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434F4D6420C09B5700992996 /* Item.swift in Sources */,
+				434F4D6220C098CE00992996 /* Frame.swift in Sources */,
 				43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */,
 				4363195B20C02EE000CF5F45 /* AppConstants.swift in Sources */,
 				4363195020C0231800CF5F45 /* PrefsInterfaceController.swift in Sources */,
+				434F4D6020C097D800992996 /* Sitemap.swift in Sources */,
 				4363195720C02C4900CF5F45 /* UserDefaultsRepository.swift in Sources */,
 				4363195E20C0439600CF5F45 /* AppMessageService.swift in Sources */,
 				43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */,
-				4363195320C0294400CF5F45 /* OpenHabRepository.swift in Sources */,
+				434F4D5D20C095BB00992996 /* OpenHabService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

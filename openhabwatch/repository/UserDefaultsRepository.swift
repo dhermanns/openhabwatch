@@ -14,6 +14,11 @@ import UIKit
  */
 class UserDefaultsRepository {
     
+    //FIXME: Determine the right URI which should be used
+    static func readActiveUrl() -> String {
+        return readLocalUrl();
+    }
+    
     static func readLocalUrl() -> String {
         guard let defaults = UserDefaults(suiteName: AppConstants.APP_GROUP_ID) else {
             return ""

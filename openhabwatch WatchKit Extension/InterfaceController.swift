@@ -64,35 +64,26 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
-    private func switchOpenHabItem(itemName : String) {
+    func switchOpenHabItem(itemName : String) {
         
         displayActivityImage()
-        
-        let url = URL(string: "http://pi3:8080/rest/items/" + itemName)!
-        var request = URLRequest(url: url)
-        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let postString = "TOGGLE"
-        request.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            DispatchQueue.main.sync {
-                self.hideActivityImage()
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    self.displayAlert(message: "error=\(String(describing: error))")
-                    return
-                }
-                
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                    let message = "statusCode should be 200, but is \(httpStatus.statusCode)\n" +
-                                    "response = \(String(describing: response))"
-                    self.displayAlert(message: message)
-                }
-                
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(String(describing: responseString))")
+        OpenHabService.singleton.switchOpenHabItem(itemName: itemName, {(data, response, error) -> Void in
+                                                   
+            self.hideActivityImage()
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                self.displayAlert(message: "error=\(String(describing: error))")
+                return
             }
-        }
-        task.resume()
+        
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                let message = "statusCode should be 200, but is \(httpStatus.statusCode)\n" +
+                "response = \(String(describing: response))"
+                self.displayAlert(message: message)
+            }
+        
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
+        })
     }
     
     private func displayAlert(message : String) {
