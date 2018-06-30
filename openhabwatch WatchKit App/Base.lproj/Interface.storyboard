@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -18,42 +18,39 @@
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="Z3L-Ie-lK8">
                                     <items>
-                                        <button width="1" height="50" alignment="left" title="Haustür" id="QIk-ma-Uhw">
-                                            <connections>
-                                                <action selector="doButtonPressedHaustuer" destination="AgC-eL-Hgc" id="rSl-AC-Lxp"/>
-                                            </connections>
-                                        </button>
-                                        <button width="1" height="50" alignment="left" title="Garage" id="63d-kP-RBl">
-                                            <connections>
-                                                <action selector="doButtonPressedGarage" destination="AgC-eL-Hgc" id="uQ4-N8-yR2"/>
-                                            </connections>
-                                        </button>
-                                        <button width="1" height="50" alignment="left" title="Garagentür" id="1rN-tl-cji">
-                                            <connections>
-                                                <action selector="doButtonPressedGaragentuer" destination="AgC-eL-Hgc" id="KzZ-rz-PXt"/>
-                                            </connections>
-                                        </button>
-                                        <button width="1" height="50" alignment="left" title="Küchenlampe" id="hlh-Jh-M5Z">
-                                            <connections>
-                                                <action selector="doButtonPressedKuechenlampe" destination="AgC-eL-Hgc" id="UbR-nY-VVb"/>
-                                            </connections>
-                                        </button>
+                                        <table alignment="left" id="rMX-tM-cm0" userLabel="SwitchTable">
+                                            <items>
+                                                <tableRow identifier="buttonRow" id="fzl-gH-2Zn" customClass="ButtonTableRowController" customModule="openhabwatch_WatchKit_Extension">
+                                                    <group key="rootItem" width="1" alignment="left" id="Q0J-qh-mPk">
+                                                        <items>
+                                                            <button width="1" height="1" alignment="center" title="Button" id="hJr-lW-Z7n">
+                                                                <connections>
+                                                                    <action selector="doButtonPressed" destination="fzl-gH-2Zn" id="7B5-IV-t6F"/>
+                                                                </connections>
+                                                            </button>
+                                                        </items>
+                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                    </group>
+                                                    <connections>
+                                                        <outlet property="button" destination="hJr-lW-Z7n" id="d66-0G-aOl"/>
+                                                    </connections>
+                                                </tableRow>
+                                            </items>
+                                        </table>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" verticalAlignment="center" layout="overlap" id="jR9-Fd-TaV">
                                     <items>
                                         <imageView alignment="center" image="Activity1" id="ASz-Os-ceT"/>
                                     </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
                             </items>
                         </group>
                     </items>
                     <connections>
                         <outlet property="activityImage" destination="ASz-Os-ceT" id="uhT-Vg-n4Y"/>
-                        <outlet property="garageButton" destination="63d-kP-RBl" id="8Z8-d0-EcR"/>
-                        <outlet property="garagentuerButton" destination="1rN-tl-cji" id="J3i-Qu-5Ew"/>
-                        <outlet property="haustuerButton" destination="QIk-ma-Uhw" id="ZNc-9b-PGa"/>
-                        <outlet property="kuechenButton" destination="hlh-Jh-M5Z" id="WZ5-bf-7tt"/>
+                        <outlet property="buttonTable" destination="rMX-tM-cm0" id="DpY-Js-5aC"/>
                         <segue destination="e7o-Tt-CsM" kind="relationship" relationship="nextPage" id="CAe-kA-aVl"/>
                     </connections>
                 </controller>
@@ -97,7 +94,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="314" y="31"/>
+            <point key="canvasLocation" x="313" y="288"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

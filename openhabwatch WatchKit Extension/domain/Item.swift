@@ -9,9 +9,12 @@
 import Foundation
 
 class Item {
-    let name : String
     
-    init(name : String) {
+    let name : String
+    let label : String
+    
+    init(name : String, label : String) {
         self.name = name
+        self.label = label
     }
 }

@@ -16,6 +16,10 @@ class UserDefaultsRepository {
     
     //FIXME: Determine the right URI which should be used
     static func readActiveUrl() -> String {
+        
+        if readRemoteUrl() != "" {
+            return readRemoteUrl()
+        }
         return readLocalUrl();
     }
     
@@ -120,6 +124,27 @@ class UserDefaultsRepository {
         
         let defaults = UserDefaults(suiteName: AppConstants.APP_GROUP_ID)
         defaults!.setValue(sitemapName, forKey: "sitemapName")
+    }
+    
+    static func readSitemap() -> Sitemap {
+        
+        guard let defaults = UserDefaults(suiteName: AppConstants.APP_GROUP_ID) else {
+            return Sitemap.init(frames: [])
+        }
+        
+        guard let sitemap = defaults.object(forKey: "sitemap") as! Sitemap? else {
+            return Sitemap.init(frames: [])
+        }
+        
+        return sitemap
+    }
+    
+    static func saveSitemap(_ sitemap : Sitemap) {
+        
+        let defaults = UserDefaults(suiteName: AppConstants.APP_GROUP_ID)
+        
+        // FIXME: Store Sitemap here => Serialization is missing
+        //defaults!.setValue(sitemap, forKey: "sitemap")
     }
     
     fileprivate static func validateUrl(_ stringURL : String) -> Bool {

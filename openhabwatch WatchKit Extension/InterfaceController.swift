@@ -11,15 +11,9 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    @IBOutlet var haustuerButton: WKInterfaceButton!
-    @IBOutlet var garageButton: WKInterfaceButton!
-    @IBOutlet var garagentuerButton: WKInterfaceButton!
-    @IBOutlet var kuechenButton: WKInterfaceButton!
     
     @IBOutlet var activityImage: WKInterfaceImage!
-    
-    var darkGray = UIColor(red:0.13, green:0.13, blue:0.14, alpha:1.0)
+    @IBOutlet var buttonTable: WKInterfaceTable!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -31,62 +25,35 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        self.refresh(UserDefaultsRepository.readSitemap())
+        // load the current Sitemap
+        OpenHabService.singleton.readSitemap({(sitemap) -> Void in
+            UserDefaultsRepository.saveSitemap(sitemap)
+            self.refresh(sitemap)
+        })
+    }
+    
+    fileprivate func refresh(_ sitemap: (Sitemap)) {
+        
+        if sitemap.frames.count == 0 {
+            return
+        }
+        
+        self.buttonTable.setNumberOfRows(sitemap.frames[0].items.count, withRowType: "buttonRow")
+        for i in 0..<self.buttonTable.numberOfRows {
+            let row = self.buttonTable.rowController(at: i) as! ButtonTableRowController
+            row.setInterfaceController(interfaceController: self)
+            row.setItem(item: sitemap.frames[0].items[i])
+        }
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    @IBAction func doButtonPressedHaustuer() {
-        toggleButtonColor(button: self.haustuerButton)
-        switchOpenHabItem(itemName: "KeyMatic_Open")
-    }
     
-    @IBAction func doButtonPressedGarage() {
-        toggleButtonColor(button: self.garageButton)
-        switchOpenHabItem(itemName: "Garagentor_Taster")
-    }
-    
-    @IBAction func doButtonPressedGaragentuer() {
-        toggleButtonColor(button: self.garagentuerButton)
-        switchOpenHabItem(itemName: "KeyMatic_Garage_State")
-    }
-
-    @IBAction func doButtonPressedKuechenlampe() {
-        toggleButtonColor(button: self.kuechenButton)
-        switchOpenHabItem(itemName: "Licht_EG_Kueche")
-    }
-    
-    private func toggleButtonColor(button : WKInterfaceButton) {
-        button.setBackgroundColor(UIColor.darkGray)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(250)) {
-            button.setBackgroundColor(self.darkGray)
-        }
-    }
-    
-    func switchOpenHabItem(itemName : String) {
-        
-        displayActivityImage()
-        OpenHabService.singleton.switchOpenHabItem(itemName: itemName, {(data, response, error) -> Void in
-                                                   
-            self.hideActivityImage()
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                self.displayAlert(message: "error=\(String(describing: error))")
-                return
-            }
-        
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                let message = "statusCode should be 200, but is \(httpStatus.statusCode)\n" +
-                "response = \(String(describing: response))"
-                self.displayAlert(message: message)
-            }
-        
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString))")
-        })
-    }
-    
-    private func displayAlert(message : String) {
+    func displayAlert(message : String) {
         let okAction = WKAlertAction.init(title: "Ok", style:.default) {
             print("ok action")
         }
@@ -94,12 +61,12 @@ class InterfaceController: WKInterfaceController {
         presentAlert(withTitle: "Fehler", message: message, preferredStyle:.actionSheet, actions: [okAction])
     }
     
-    private func displayActivityImage() {
+    func displayActivityImage() {
         activityImage.setHidden(false)
         activityImage.startAnimatingWithImages(in: NSRange(1...15), duration: 1.0, repeatCount: 0)
     }
     
-    private func hideActivityImage() {
+    func hideActivityImage() {
         activityImage.setHidden(true);
         activityImage.stopAnimating();
     }

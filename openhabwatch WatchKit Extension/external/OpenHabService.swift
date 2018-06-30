@@ -22,7 +22,8 @@ class OpenHabService {
         }
         
         // Get the current data from REST-Call
-        let request = URLRequest(url: URL(string: baseUrl + "/rest/sitemaps/" + sitemapName + "?jsoncallback=callback")!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 20)
+        var request = URLRequest(url: URL(string: baseUrl + "/rest/sitemaps/" + sitemapName + "?jsoncallback=callback")!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 20)
+        request.setValue("Basic \(getBase64EncodedCredentials())", forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             
@@ -37,15 +38,22 @@ class OpenHabService {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
                     guard let jsonDict :NSDictionary = json as? NSDictionary else {
+                        resultHandler(Sitemap.init(frames: []))
                         return
                     }
-                    let settingsDict = jsonDict.object(forKey: "widgets") as! NSDictionary
-                    if (settingsDict.count == 0) {
+                    let homepageDict = jsonDict.object(forKey: "homepage") as! NSDictionary
+                    if (homepageDict.count == 0) {
                         resultHandler(Sitemap.init(frames: []))
+                        return
                     }
-                    let frames : [Frame] = []
+                    let widgetsDict = homepageDict.object(forKey: "widgets") as! NSMutableArray
+                    if (widgetsDict.count == 0) {
+                        resultHandler(Sitemap.init(frames: []))
+                        return
+                    }
+                    var frames : [Frame] = []
+                    frames.append(self.readWidgets(widgets: widgetsDict))
                     let sitemap = Sitemap.init(frames: frames)
-                    //FIXME: Frames aus JSON erzeugen
                     
                     resultHandler(sitemap)
                 } catch let error as NSError {
@@ -54,6 +62,22 @@ class OpenHabService {
             }
         })
         task.resume()
+    }
+    
+    private func readWidgets(widgets : NSMutableArray) -> Frame {
+        
+        var items: [Item] = []
+        if widgets.count == 0 {
+            return Frame.init(items: items);
+        }
+        
+        for widget in widgets {
+            let item = (widget as! NSDictionary).value(forKey: "item")
+            items.append(
+                Item.init(name: (item as! NSDictionary).value(forKey: "name") as! String,
+                          label:  (item as! NSDictionary).value(forKey: "label") as! String))
+        }
+        return Frame.init(items: items);
     }
     
     func switchOpenHabItem(itemName : String,_ resultHandler : @escaping ((Data?, URLResponse?, Error?) -> Void)) {

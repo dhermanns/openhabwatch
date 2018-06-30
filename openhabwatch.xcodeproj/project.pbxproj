@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430F1DB520D83A8B00899EAA /* ButtonTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1DB420D83A8B00899EAA /* ButtonTableRowController.swift */; };
 		432AB39120C0192300910B6E /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AB39020C0192300910B6E /* WatchService.swift */; };
 		434F4D5D20C095BB00992996 /* OpenHabService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5C20C095BB00992996 /* OpenHabService.swift */; };
 		434F4D6020C097D800992996 /* Sitemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5F20C097D800992996 /* Sitemap.swift */; };
@@ -19,6 +20,7 @@
 		4363195B20C02EE000CF5F45 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195920C02EC300CF5F45 /* AppConstants.swift */; };
 		4363195E20C0439600CF5F45 /* AppMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195D20C0439600CF5F45 /* AppMessageService.swift */; };
 		4363196020C0482900CF5F45 /* WatchMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4363195F20C0482900CF5F45 /* WatchMessageService.swift */; };
+		4376206320E7C0B800FDC46C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376206220E7C0B800FDC46C /* ComplicationController.swift */; };
 		43780C2620986815003C9CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C2520986815003C9CE0 /* AppDelegate.swift */; };
 		43780C2820986815003C9CE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C2720986815003C9CE0 /* ViewController.swift */; };
 		43780C2B20986815003C9CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43780C2920986815003C9CE0 /* Main.storyboard */; };
@@ -33,6 +35,9 @@
 		43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C5E20986815003C9CE0 /* InterfaceController.swift */; };
 		43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C6020986815003C9CE0 /* ExtensionDelegate.swift */; };
 		43780C6320986815003C9CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43780C6220986815003C9CE0 /* Assets.xcassets */; };
+		43D8D63120DAF58E000D341D /* Sitemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5F20C097D800992996 /* Sitemap.swift */; };
+		43D8D63220DAF5B9000D341D /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6120C098CE00992996 /* Frame.swift */; };
+		43D8D63320DAF5BC000D341D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6320C09B5700992996 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		430F1DB420D83A8B00899EAA /* ButtonTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableRowController.swift; sourceTree = "<group>"; };
 		432AB39020C0192300910B6E /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
 		434F4D5C20C095BB00992996 /* OpenHabService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHabService.swift; sourceTree = "<group>"; };
 		434F4D5F20C097D800992996 /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 		4363195920C02EC300CF5F45 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4363195D20C0439600CF5F45 /* AppMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessageService.swift; sourceTree = "<group>"; };
 		4363195F20C0482900CF5F45 /* WatchMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessageService.swift; sourceTree = "<group>"; };
+		4376206220E7C0B800FDC46C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		43780C2220986815003C9CE0 /* openhabwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openhabwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43780C2520986815003C9CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43780C2720986815003C9CE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -276,7 +283,9 @@
 				434F4D5E20C097BE00992996 /* domain */,
 				4363195C20C0437C00CF5F45 /* external */,
 				43780C5E20986815003C9CE0 /* InterfaceController.swift */,
+				430F1DB420D83A8B00899EAA /* ButtonTableRowController.swift */,
 				4363194F20C0231800CF5F45 /* PrefsInterfaceController.swift */,
+				4376206220E7C0B800FDC46C /* ComplicationController.swift */,
 				43780C6020986815003C9CE0 /* ExtensionDelegate.swift */,
 				43780C6220986815003C9CE0 /* Assets.xcassets */,
 				43780C6420986815003C9CE0 /* Info.plist */,
@@ -499,6 +508,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43780C2820986815003C9CE0 /* ViewController.swift in Sources */,
+				43D8D63320DAF5BC000D341D /* Item.swift in Sources */,
+				43D8D63220DAF5B9000D341D /* Frame.swift in Sources */,
+				43D8D63120DAF58E000D341D /* Sitemap.swift in Sources */,
 				43780C2620986815003C9CE0 /* AppDelegate.swift in Sources */,
 				4363195520C02A1600CF5F45 /* UserDefaultsRepository.swift in Sources */,
 				4363196020C0482900CF5F45 /* WatchMessageService.swift in Sources */,
@@ -529,8 +541,10 @@
 			files = (
 				434F4D6420C09B5700992996 /* Item.swift in Sources */,
 				434F4D6220C098CE00992996 /* Frame.swift in Sources */,
+				430F1DB520D83A8B00899EAA /* ButtonTableRowController.swift in Sources */,
 				43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */,
 				4363195B20C02EE000CF5F45 /* AppConstants.swift in Sources */,
+				4376206320E7C0B800FDC46C /* ComplicationController.swift in Sources */,
 				4363195020C0231800CF5F45 /* PrefsInterfaceController.swift in Sources */,
 				434F4D6020C097D800992996 /* Sitemap.swift in Sources */,
 				4363195720C02C4900CF5F45 /* UserDefaultsRepository.swift in Sources */,
