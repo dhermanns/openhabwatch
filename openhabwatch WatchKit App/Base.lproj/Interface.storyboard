@@ -62,25 +62,25 @@
                 <controller id="e7o-Tt-CsM" customClass="PrefsInterfaceController" customModule="openhabwatch_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Local URL:" id="b9D-rP-m3a">
-                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" id="Kmv-Np-1NA" userLabel="localUrlLabel">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <label alignment="left" text="Remote URL:" id="qWA-0p-D0o">
-                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" id="Z9M-hk-rHd" userLabel="remoteUrlLabel">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <label alignment="left" text="Sitemap:" id="Tnv-Ze-AJD">
-                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" id="o8J-0J-WBs" userLabel="sitemapLabel">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <label alignment="left" text="Username:" id="c5b-VZ-QOY">
-                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" id="o6x-vo-MV1" userLabel="usernameLabel">
                             <fontDescription key="font" type="system" pointSize="12"/>
