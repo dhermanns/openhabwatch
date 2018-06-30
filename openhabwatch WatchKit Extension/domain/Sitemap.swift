@@ -9,11 +9,20 @@
 import Foundation
 
 /** OpenHab Sitemap containing a list of frames **/
-class Sitemap {
+class Sitemap : NSObject, NSCoding {
     
     let frames : [Frame]
     
     init(frames : [Frame]) {
         self.frames = frames
+    }
+    
+    // serializer
+    required init(coder decoder: NSCoder) {
+        self.frames = decoder.decodeObject(forKey: "frames") as! [Frame]
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(frames, forKey: "frames")
     }
 }

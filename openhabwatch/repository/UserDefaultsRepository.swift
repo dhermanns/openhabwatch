@@ -132,19 +132,17 @@ class UserDefaultsRepository {
             return Sitemap.init(frames: [])
         }
         
-        guard let sitemap = defaults.object(forKey: "sitemap") as! Sitemap? else {
+        guard let sitemap = defaults.object(forKey: "sitemap") as! Data? else {
             return Sitemap.init(frames: [])
         }
         
-        return sitemap
+        return NSKeyedUnarchiver.unarchiveObject(with: sitemap) as! Sitemap
     }
     
     static func saveSitemap(_ sitemap : Sitemap) {
         
         let defaults = UserDefaults(suiteName: AppConstants.APP_GROUP_ID)
-        
-        // FIXME: Store Sitemap here => Serialization is missing
-        //defaults!.setValue(sitemap, forKey: "sitemap")
+        defaults!.set(NSKeyedArchiver.archivedData(withRootObject: sitemap), forKey: "sitemap")
     }
     
     fileprivate static func validateUrl(_ stringURL : String) -> Bool {
