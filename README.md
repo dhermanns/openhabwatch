@@ -4,7 +4,7 @@ This is a simple client for the OpenHAB Home Automation Bus. You can use the app
 
 # Sitemap Example
 
-You can define a special sitemap for your apple watch. Right now only a single frame can be displayed, but in future version, we would like to support multiple frames in your sitemap.
+You can define a special sitemap for your apple watch. Right now only a single frame can be displayed, but with future versions, we would like to support multiple frames in your sitemap.
 
 Here is a simple example how you can define your sitemap **watchos.sitemap**:
 
@@ -20,7 +20,9 @@ sitemap default label="Watch"
 
 In your openhabwatch iOS App, add the sitemap to your connection params:
 
-![iOS Preferences Screen](openhabwatch-ios.png "Openhabwatch iOS Preferences Screen")
+<kbd>
+<img src="openhabwatch-ios.png">
+</kbd>
 
 If the remote URL has been entered it will always used. The local URL will right now only be used when a remote URL is missing.
 
@@ -33,5 +35,6 @@ And the switch buttons on the first apple watch page:
 ![WatchOS Sitemap Screen](openhabwatch-2.png "Openhabwatch WatchOS Sitemap Screen")
 
 To quickly access the app, you can add the openhabwatch complication to your watch face:
+
 ![WatchOS Complication Screen](openhabwatch-3.png "Openhabwatch WatchOS Complication Screen")
 
