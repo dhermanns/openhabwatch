@@ -20,7 +20,9 @@ sitemap default label="Watch"
 
 In your openhabwatch iOS App, add the sitemap to your connection params:
 
-![iOS Preferences Screen](openhabwatch-ios.png "Openhabwatch iOS Preferences Screen")
+<kbd>
+<img src="openhabwatch-ios.png">
+</kbd>
 
 If the remote URL has been entered it will always used. The local URL will right now only be used when a remote URL is missing.
 
