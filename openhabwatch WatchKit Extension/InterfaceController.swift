@@ -28,7 +28,12 @@ class InterfaceController: WKInterfaceController {
         
         self.refresh(UserDefaultsRepository.readSitemap())
         // load the current Sitemap
-        OpenHabService.singleton.readSitemap({(sitemap) -> Void in
+        OpenHabService.singleton.readSitemap({(sitemap, errorString) -> Void in
+            
+            if errorString != "" {
+                self.displayAlert(message: errorString)
+                return
+            }
             UserDefaultsRepository.saveSitemap(sitemap)
             self.refresh(sitemap)
         })

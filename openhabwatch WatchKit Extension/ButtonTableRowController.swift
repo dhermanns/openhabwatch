@@ -11,10 +11,11 @@ import Foundation
 
 class ButtonTableRowController : NSObject {
     
-    var lightGray = UIColor(red:0.25, green:0.25, blue:0.25, alpha:1.0)
+    var lightGray = UIColor(red:0.1, green:0.1, blue:0.1, alpha:1.0)
     var darkGray = UIColor(red:0.1, green:0.1, blue:0.1, alpha:1.0)
     
-    @IBOutlet weak var button: WKInterfaceButton!
+    @IBOutlet var buttonSwitch: WKInterfaceSwitch!
+    
     var item : Item?
     var interfaceController : InterfaceController?
     
@@ -24,11 +25,17 @@ class ButtonTableRowController : NSObject {
     
     public func setItem(item : Item) {
         self.item = item
-        button.setTitle(item.label)
+        buttonSwitch.setTitle(item.label)
+        buttonSwitch.setOn(item.state == "ON")
     }
     
-    @IBAction func doButtonPressed() {
-        toggleButtonColor(button: button)
+    @IBAction func doSwitchButtonPressed(_ value: Bool) {
+        //toggleButtonColor(button: buttonSwitch)
+        if item?.state == "ON" {
+            item?.state = "OFF"
+        } else {
+            item?.state = "ON"
+        }
         switchOpenHabItem(itemName: item!.name)
     }
     

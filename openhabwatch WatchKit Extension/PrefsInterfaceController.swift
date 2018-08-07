@@ -12,6 +12,7 @@ import Foundation
 
 class PrefsInterfaceController: WKInterfaceController {
     
+    @IBOutlet var versionLabel: WKInterfaceLabel!
     @IBOutlet var localUrlLabel: WKInterfaceLabel!
     @IBOutlet var remoteUrlLabel: WKInterfaceLabel!
     @IBOutlet var sitemapLabel: WKInterfaceLabel!
@@ -25,12 +26,22 @@ class PrefsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        displayTheApplicationVersionNumber()
+        
         localUrlLabel.setText(UserDefaultsRepository.readLocalUrl())
         remoteUrlLabel.setText(UserDefaultsRepository.readRemoteUrl())
         
         sitemapLabel.setText(UserDefaultsRepository.readSitemapName())
         
         usernameLabel.setText(UserDefaultsRepository.readUsername())
+    }
+    
+    func displayTheApplicationVersionNumber() {
+        
+        let versionNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        
+        versionLabel.setText("V\(versionNumber).\(buildNumber)")
     }
     
     override func didDeactivate() {

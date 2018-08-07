@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var version: UILabel!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        displayTheApplicationVersionNumber()
+        
         username.text = UserDefaultsRepository.readUsername()
         password.text = UserDefaultsRepository.readPassword()
         
@@ -29,6 +32,14 @@ class ViewController: UIViewController {
         sitemapName.text = UserDefaultsRepository.readSitemapName()
     }
 
+    func displayTheApplicationVersionNumber() {
+        
+        let versionNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        
+        version.text = "V\(versionNumber).\(buildNumber)"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
