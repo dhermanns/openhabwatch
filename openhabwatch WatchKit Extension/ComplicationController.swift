@@ -49,6 +49,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 template = CLKComplicationTemplateCircularSmallRingImage()
                 (template as! CLKComplicationTemplateCircularSmallRingImage).imageProvider =
                     CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
+            case .graphicCorner:
+                if #available(watchOSApplicationExtension 5.0, *) {
+                    let modTemplate = CLKComplicationTemplateGraphicCornerTextImage()
+                    modTemplate.imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!)
+                    modTemplate.textProvider = CLKSimpleTextProvider(text: "openHAB")
+                    template = modTemplate
+                } else {
+                    abort()
+                }
+            case .graphicCircular:
+                if #available(watchOSApplicationExtension 5.0, *) {
+                    let modTemplate = CLKComplicationTemplateGraphicCircularImage()
+                    modTemplate.imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!)
+                    template = modTemplate
+                } else {
+                    abort()
+                }
             default: break
         }
         
