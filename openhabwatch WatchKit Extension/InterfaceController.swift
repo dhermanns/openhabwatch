@@ -31,8 +31,12 @@ class InterfaceController: WKInterfaceController {
         OpenHabService.singleton.readSitemap({(sitemap, errorString) -> Void in
             
             if errorString != "" {
-                self.displayAlert(message: errorString)
-                return
+                // Timeouts happen when the app is in background state.
+                // This shouldn't popup an error message.
+                if AppState.singleton.active {
+                    self.displayAlert(message: errorString)
+                    return
+                }
             }
             UserDefaultsRepository.saveSitemap(sitemap)
             self.refresh(sitemap)
@@ -52,7 +56,7 @@ class InterfaceController: WKInterfaceController {
             row.setItem(item: sitemap.frames[0].items[i])
         }
     }
-    
+
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

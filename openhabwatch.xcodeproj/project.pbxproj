@@ -35,6 +35,7 @@
 		43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C5E20986815003C9CE0 /* InterfaceController.swift */; };
 		43780C6120986815003C9CE0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43780C6020986815003C9CE0 /* ExtensionDelegate.swift */; };
 		43780C6320986815003C9CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43780C6220986815003C9CE0 /* Assets.xcassets */; };
+		439A0EAB2182561E00E7BE75 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A0EAA2182561E00E7BE75 /* AppState.swift */; };
 		43D8D63120DAF58E000D341D /* Sitemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5F20C097D800992996 /* Sitemap.swift */; };
 		43D8D63220DAF5B9000D341D /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6120C098CE00992996 /* Frame.swift */; };
 		43D8D63320DAF5BC000D341D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6320C09B5700992996 /* Item.swift */; };
@@ -131,6 +132,7 @@
 		43780C6020986815003C9CE0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		43780C6220986815003C9CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43780C6420986815003C9CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439A0EAA2182561E00E7BE75 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 		43780C5D20986815003C9CE0 /* openhabwatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				439A0EA9218255B600E7BE75 /* app */,
 				434F4D5E20C097BE00992996 /* domain */,
 				4363195C20C0437C00CF5F45 /* external */,
 				43780C5E20986815003C9CE0 /* InterfaceController.swift */,
@@ -291,6 +294,14 @@
 				43780C6420986815003C9CE0 /* Info.plist */,
 			);
 			path = "openhabwatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		439A0EA9218255B600E7BE75 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				439A0EAA2182561E00E7BE75 /* AppState.swift */,
+			);
+			path = app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +560,7 @@
 				434F4D6020C097D800992996 /* Sitemap.swift in Sources */,
 				4363195720C02C4900CF5F45 /* UserDefaultsRepository.swift in Sources */,
 				4363195E20C0439600CF5F45 /* AppMessageService.swift in Sources */,
+				439A0EAB2182561E00E7BE75 /* AppState.swift in Sources */,
 				43780C5F20986815003C9CE0 /* InterfaceController.swift in Sources */,
 				434F4D5D20C095BB00992996 /* OpenHabService.swift in Sources */,
 			);

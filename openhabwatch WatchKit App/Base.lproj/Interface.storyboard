@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch42" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,7 +16,8 @@
                     <items>
                         <group width="1" alignment="left" layout="overlap" id="Jg9-7I-sSk">
                             <items>
-                                <group width="1" alignment="left" layout="vertical" id="Z3L-Ie-lK8">
+                                <imageView alignment="center" verticalAlignment="center" image="Activity1" id="ASz-Os-ceT"/>
+                                <group width="1" alignment="left" layout="overlap" id="Z3L-Ie-lK8">
                                     <items>
                                         <table alignment="left" id="rMX-tM-cm0" userLabel="SwitchTable">
                                             <items>
@@ -38,12 +39,6 @@
                                             </items>
                                         </table>
                                     </items>
-                                </group>
-                                <group width="1" alignment="left" verticalAlignment="center" layout="overlap" id="jR9-Fd-TaV">
-                                    <items>
-                                        <imageView alignment="center" image="Activity1" id="ASz-Os-ceT"/>
-                                    </items>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
                             </items>
                         </group>
