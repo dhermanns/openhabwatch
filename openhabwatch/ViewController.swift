@@ -24,12 +24,17 @@ class ViewController: UIViewController {
         displayTheApplicationVersionNumber()
         
         username.text = UserDefaultsRepository.readUsername()
+        username.setBottomBorder(withColor: UIColor.lightGray)
         password.text = UserDefaultsRepository.readPassword()
+        password.setBottomBorder(withColor: UIColor.lightGray)
         
         localUrl.text = UserDefaultsRepository.readLocalUrl()
+        localUrl.setBottomBorder(withColor: UIColor.lightGray)
         remoteUrl.text = UserDefaultsRepository.readRemoteUrl()
+        remoteUrl.setBottomBorder(withColor: UIColor.lightGray)
         
         sitemapName.text = UserDefaultsRepository.readSitemapName()
+        sitemapName.setBottomBorder(withColor: UIColor.lightGray)
     }
 
     func displayTheApplicationVersionNumber() {
