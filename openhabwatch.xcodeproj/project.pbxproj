@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		430F1DB520D83A8B00899EAA /* ButtonTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1DB420D83A8B00899EAA /* ButtonTableRowController.swift */; };
 		432AB39120C0192300910B6E /* WatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AB39020C0192300910B6E /* WatchService.swift */; };
+		434E9A13218B11A200842D9E /* UnderlinedUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434E9A12218B11A200842D9E /* UnderlinedUITextField.swift */; };
 		434F4D5D20C095BB00992996 /* OpenHabService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5C20C095BB00992996 /* OpenHabService.swift */; };
 		434F4D6020C097D800992996 /* Sitemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D5F20C097D800992996 /* Sitemap.swift */; };
 		434F4D6220C098CE00992996 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F4D6120C098CE00992996 /* Frame.swift */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		430F1DB420D83A8B00899EAA /* ButtonTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableRowController.swift; sourceTree = "<group>"; };
 		432AB39020C0192300910B6E /* WatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchService.swift; sourceTree = "<group>"; };
+		434E9A12218B11A200842D9E /* UnderlinedUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedUITextField.swift; sourceTree = "<group>"; };
 		434F4D5C20C095BB00992996 /* OpenHabService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHabService.swift; sourceTree = "<group>"; };
 		434F4D5F20C097D800992996 /* Sitemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitemap.swift; sourceTree = "<group>"; };
 		434F4D6120C098CE00992996 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 			path = external;
 			sourceTree = "<group>";
 		};
+		434E9A11218B118100842D9E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				434E9A12218B11A200842D9E /* UnderlinedUITextField.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		434F4D5E20C097BE00992996 /* domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +248,7 @@
 		43780C2420986815003C9CE0 /* openhabwatch */ = {
 			isa = PBXGroup;
 			children = (
+				434E9A11218B118100842D9E /* extensions */,
 				4363195820C02E2900CF5F45 /* app */,
 				4363195620C02A2600CF5F45 /* repository */,
 				432AB38F20C018DB00910B6E /* external */,
@@ -523,6 +534,7 @@
 				43D8D63220DAF5B9000D341D /* Frame.swift in Sources */,
 				43D8D63120DAF58E000D341D /* Sitemap.swift in Sources */,
 				43780C2620986815003C9CE0 /* AppDelegate.swift in Sources */,
+				434E9A13218B11A200842D9E /* UnderlinedUITextField.swift in Sources */,
 				4363195520C02A1600CF5F45 /* UserDefaultsRepository.swift in Sources */,
 				4363196020C0482900CF5F45 /* WatchMessageService.swift in Sources */,
 				432AB39120C0192300910B6E /* WatchService.swift in Sources */,

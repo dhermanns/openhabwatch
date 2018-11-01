@@ -53,7 +53,7 @@ class UserDefaultsRepository {
         }
         
         guard let remoteUrl = defaults.string(forKey: "remoteUrl") else {
-            return ""
+            return "https://dhe.ddns.net:444"
         }
         
         let trimmedUri = uriWithoutTrailingSlashes(remoteUrl).trimmingCharacters(
@@ -78,7 +78,7 @@ class UserDefaultsRepository {
         }
         
         guard let username = defaults.string(forKey: "username") else {
-            return ""
+            return "test"
         }
         
         return username
@@ -96,7 +96,7 @@ class UserDefaultsRepository {
         }
         
         guard let password = defaults.string(forKey: "password") else {
-            return ""
+            return "test"
         }
         
         return password
@@ -114,7 +114,7 @@ class UserDefaultsRepository {
         }
         
         guard let sitemapName = defaults.string(forKey: "sitemapName") else {
-            return ""
+            return "watch"
         }
         
         return sitemapName
